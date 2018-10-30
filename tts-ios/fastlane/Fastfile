@@ -1,0 +1,127 @@
+#!/bin/ruby
+require_relative "plugin/flows/helper/changelog_helper"
+actions_path "plugin/flows/actions"
+opt_out_usage
+fastlane_version "2.92.1"
+
+xcode_project = "tts.xcodeproj"
+xcode_application_scheme = "tts"
+xcode_application_target = "tts"
+app_identifier = "ru.tts.garage"
+
+desc "Make a build and upload it to the Testflight"
+desc "Options: build_number optional"
+lane :beta do |options|
+    ensure_git_status_clean
+    
+    if options[:build_number]
+        increment_build_number(build_number: options[:build_number])
+    else
+        increment_build_number
+    end
+    
+    output_directory = "build"
+    
+    # build version and number
+    version_number = get_version_number(xcodeproj: xcode_project)
+    build_number = get_build_number(xcodeproj: xcode_project)
+    build_id = get_build_id(version_number, build_number)
+    set_settings_build_number(build_id)
+
+    # archive and export
+    ipa = archive(output_directory: output_directory, filename: build_id)
+
+    # backup
+    backup(output_directory: output_directory, filename: build_id)
+    
+    # upload to testflight
+    pilot(ipa: ipa, skip_submission: true, skip_waiting_for_build_processing: true)
+    
+    # tag and commit
+    tag = "builds/beta/" + build_number
+    commit_version_bump(xcodeproj: xcode_project, force: true, settings: true)
+    add_git_tag(tag: tag, force: true)
+    
+    # wait for build processing to be complete
+    wait_for_build_processing_to_be_complete(app_identifier: app_identifier, app_build: build_number, app_version: version_number)
+
+    # distribute to testers
+    groups = ["DZ Testers"] #, "TTS Testers"]
+    distribute(version_number: version_number, build_number: build_number, groups: groups)
+end
+
+desc "Creates xcarchive"
+lane :archive do |options|
+    output_directory = options[:output_directory]
+    filename = options[:filename]
+    archive_path = "#{output_directory}/#{filename}.xcarchive"
+    output_name = "#{filename}.ipa"
+
+    gym(scheme: xcode_application_scheme,
+        clean: true,
+        configuration: "Release",
+        export_method: "app-store",
+        archive_path: archive_path,
+        output_directory: output_directory,
+        output_name: output_name,
+        build_path: output_directory,
+        export_xcargs: "-allowProvisioningUpdates")
+end
+
+desc "Zips xcarchive"
+lane :backup do |options|
+    output_directory = options[:output_directory]
+    filename = options[:filename]
+    archive_path = "#{output_directory}/#{filename}.xcarchive"
+
+    backup_xcarchive(xcarchive: archive_path, destination: output_directory, versioned: false)
+    sh("rm -rf ../#{archive_path.shellescape}")
+end
+
+desc "Distribute to testers"
+lane :distribute do |options|
+    groups = options[:groups]
+    version_number = options[:version_number]
+    build_number = options[:build_number]
+    build_id = get_build_id(version_number, build_number)
+    
+    # read changelog
+    changelog = read_changelog
+    
+    # distribute to testers
+    distribute_to_testflight(app_identifier: app_identifier,
+                             app_version: version_number,
+                             app_build: build_number,
+                             changelog: changelog.empty? ? build_id : changelog,
+                             distribute_external: true, groups: groups)
+                             
+     # update changelog
+     if changelog.strip.length > 0
+         stamp_changelog(section_identifier: "#{build_id}")
+         git_commit(path: "CHANGELOG.md", message: "Update Changelog")
+     end
+     
+     # post to telegram
+     telegram(token: ENV["TELEGRAM_TOKEN"],
+              chat_id: ENV["TELEGRAM_CHAT_ID"],
+              text: "🎉 iOS #{build_id}\nДоступ для #{groups}\n#{changelog}",
+              parse_mode: "Markdown")
+end
+
+def get_build_id(version_number, build_number)
+    return "#{version_number} (#{build_number})"
+end
+
+def set_settings_build_number(build_number)
+    path = "../iOS/Resources/Settings.bundle/Root.plist"
+    settings = Plist.parse_xml(path)
+    settings["PreferenceSpecifiers"].map do |element|
+        if element["Title"] == "Версия"
+            element["DefaultValue"] = build_number
+        end
+        element
+    end
+    
+    dump = Plist::Emit.dump(settings)
+    File.write(File.expand_path(path), dump)
+end

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" id="Rti-8E-XWC" customClass="ListButtonCell" customModule="tts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uzm-80-IPl">
+                        <rect key="frame" x="8" y="8" width="304" height="70"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCd-VX-dUz">
+                                <rect key="frame" x="8" y="25" width="270" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" image="chevron" translatesAutoresizingMaskIntoConstraints="NO" id="irq-uI-xiG">
+                                <rect key="frame" x="286" y="27" width="10" height="15"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eAw-2x-3aP">
+                                <rect key="frame" x="286" y="25" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="irq-uI-xiG" firstAttribute="leading" secondItem="qCd-VX-dUz" secondAttribute="trailing" constant="8" symbolic="YES" id="1z3-be-row"/>
+                            <constraint firstItem="irq-uI-xiG" firstAttribute="centerY" secondItem="Uzm-80-IPl" secondAttribute="centerY" id="hPU-j4-LaC"/>
+                            <constraint firstItem="qCd-VX-dUz" firstAttribute="leading" secondItem="Uzm-80-IPl" secondAttribute="leading" constant="8" id="jOe-Gx-K2P"/>
+                            <constraint firstItem="eAw-2x-3aP" firstAttribute="leading" secondItem="qCd-VX-dUz" secondAttribute="trailing" constant="8" symbolic="YES" id="tGf-cW-inY"/>
+                            <constraint firstItem="qCd-VX-dUz" firstAttribute="centerY" secondItem="Uzm-80-IPl" secondAttribute="centerY" id="tkb-Vz-lLM"/>
+                            <constraint firstAttribute="trailing" secondItem="irq-uI-xiG" secondAttribute="trailing" constant="8" id="yjF-z1-RLU"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Uzm-80-IPl" secondAttribute="trailing" constant="8" id="KVl-24-Im5"/>
+                <constraint firstItem="Uzm-80-IPl" firstAttribute="top" secondItem="Rti-8E-XWC" secondAttribute="top" constant="8" id="UnS-GW-dlF"/>
+                <constraint firstItem="Uzm-80-IPl" firstAttribute="leading" secondItem="Rti-8E-XWC" secondAttribute="leading" constant="8" id="Vzu-H3-dUi"/>
+                <constraint firstItem="eAw-2x-3aP" firstAttribute="centerY" secondItem="He5-uZ-WnA" secondAttribute="centerY" id="v13-N1-vdd"/>
+                <constraint firstAttribute="bottom" secondItem="Uzm-80-IPl" secondAttribute="bottom" constant="8" id="vyO-n0-81p"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="He5-uZ-WnA"/>
+            <size key="customSize" width="320" height="86"/>
+            <connections>
+                <outlet property="accessoryView" destination="irq-uI-xiG" id="UJH-AU-nzJ"/>
+                <outlet property="labelContainerView" destination="Uzm-80-IPl" id="5p1-Yv-Ezn"/>
+                <outlet property="spinner" destination="eAw-2x-3aP" id="9Zj-XX-vN2"/>
+                <outlet property="textLabel" destination="qCd-VX-dUz" id="mDt-x9-Jek"/>
+            </connections>
+            <point key="canvasLocation" x="-68" y="-48"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="chevron" width="10" height="15"/>
+    </resources>
+</document>

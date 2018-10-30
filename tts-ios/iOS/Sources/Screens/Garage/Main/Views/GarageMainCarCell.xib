@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GarageMainCarCell" customModule="tts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0y-Yf-IK9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="143"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glow" translatesAutoresizingMaskIntoConstraints="NO" id="srM-Qz-7kz">
+                                <rect key="frame" x="2" y="0.0" width="315" height="168"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_silhouette" translatesAutoresizingMaskIntoConstraints="NO" id="Z8v-bZ-TR8">
+                                <rect key="frame" x="54" y="40" width="211" height="88"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="srM-Qz-7kz" firstAttribute="centerY" secondItem="U0y-Yf-IK9" secondAttribute="centerY" priority="750" id="9xr-mn-NJN"/>
+                            <constraint firstItem="srM-Qz-7kz" firstAttribute="centerX" secondItem="U0y-Yf-IK9" secondAttribute="centerX" id="O1E-jj-zvd"/>
+                            <constraint firstItem="Z8v-bZ-TR8" firstAttribute="centerY" secondItem="srM-Qz-7kz" secondAttribute="centerY" priority="750" id="fCY-Ky-uww"/>
+                            <constraint firstItem="Z8v-bZ-TR8" firstAttribute="centerX" secondItem="srM-Qz-7kz" secondAttribute="centerX" id="gHA-WC-ycO"/>
+                            <constraint firstItem="srM-Qz-7kz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="U0y-Yf-IK9" secondAttribute="top" id="idM-XH-Ak6"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Z8v-bZ-TR8" secondAttribute="bottom" id="kLY-kS-ri1"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fE4-xU-iJr" customClass="GarageMainCarMenuButton" customModule="tts" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="143" width="106.5" height="107"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="12" maxX="0.0" maxY="8"/>
+                        <state key="normal" image="icn_car_service">
+                            <string key="title">Сервисное
+обслуживание</string>
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <state key="disabled" image="icn_car_service_disabled">
+                            <color key="titleColor" red="0.4392156862745098" green="0.48627450980392156" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWE-fA-r2U" customClass="GarageMainCarMenuButton" customModule="tts" customModuleProvider="target">
+                        <rect key="frame" x="213" y="143" width="107" height="107"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="12" maxX="0.0" maxY="8"/>
+                        <state key="normal" image="icn_car_price">
+                            <string key="title">Оценка
+автомобиля</string>
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <state key="disabled" image="icn_car_price_disabled">
+                            <color key="titleColor" red="0.4392156862745098" green="0.48627450980392156" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZA-c9-jaR" customClass="GarageMainCarMenuButton" customModule="tts" customModuleProvider="target">
+                        <rect key="frame" x="106.5" y="143" width="106.5" height="107"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="12" maxX="0.0" maxY="8"/>
+                        <state key="normal" image="icn_car_repair">
+                            <string key="title">Кузовной
+ремонт</string>
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <state key="disabled" image="icn_car_repair_disabled">
+                            <color key="titleColor" red="0.4392156862745098" green="0.48627450980392156" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="aZA-c9-jaR" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="3:7" id="3gS-aP-2cK"/>
+                <constraint firstItem="ZWE-fA-r2U" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="3:7" id="5d6-VJ-JyD"/>
+                <constraint firstItem="fE4-xU-iJr" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="6uM-fL-lWJ"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="fE4-xU-iJr" secondAttribute="bottom" id="PDy-Za-dOP"/>
+                <constraint firstItem="U0y-Yf-IK9" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="4:7" id="RBG-H8-sO6"/>
+                <constraint firstItem="fE4-xU-iJr" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="3:7" id="RXx-W1-vfH"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="ZWE-fA-r2U" secondAttribute="trailing" id="TEm-a5-Ib6"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="ZWE-fA-r2U" secondAttribute="bottom" id="UAA-pT-LTw"/>
+                <constraint firstAttribute="trailing" secondItem="U0y-Yf-IK9" secondAttribute="trailing" id="WBb-Ki-3w5"/>
+                <constraint firstItem="aZA-c9-jaR" firstAttribute="leading" secondItem="fE4-xU-iJr" secondAttribute="trailing" id="by9-qG-coR"/>
+                <constraint firstItem="aZA-c9-jaR" firstAttribute="width" secondItem="ZWE-fA-r2U" secondAttribute="width" id="cvG-eY-9H5"/>
+                <constraint firstItem="U0y-Yf-IK9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gIi-hh-xQv"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="aZA-c9-jaR" secondAttribute="bottom" id="jCF-Lr-e59"/>
+                <constraint firstItem="fE4-xU-iJr" firstAttribute="width" secondItem="aZA-c9-jaR" secondAttribute="width" id="lW9-hz-b6S"/>
+                <constraint firstItem="aZA-c9-jaR" firstAttribute="trailing" secondItem="ZWE-fA-r2U" secondAttribute="leading" id="o9s-av-gca"/>
+                <constraint firstItem="U0y-Yf-IK9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qaW-es-qxS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="320" height="240"/>
+            <connections>
+                <outlet property="carImageView" destination="Z8v-bZ-TR8" id="Fvo-7K-IKj"/>
+                <outlet property="priceButton" destination="ZWE-fA-r2U" id="lT9-AM-N15"/>
+                <outlet property="repairButton" destination="aZA-c9-jaR" id="hFH-gn-OTf"/>
+                <outlet property="serviceButton" destination="fE4-xU-iJr" id="5hq-2G-EDb"/>
+            </connections>
+            <point key="canvasLocation" x="-101" y="149"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="car_silhouette" width="211" height="88"/>
+        <image name="glow" width="315" height="168"/>
+        <image name="icn_car_price" width="56" height="56"/>
+        <image name="icn_car_price_disabled" width="56" height="56"/>
+        <image name="icn_car_repair" width="56" height="56"/>
+        <image name="icn_car_repair_disabled" width="56" height="56"/>
+        <image name="icn_car_service" width="56" height="56"/>
+        <image name="icn_car_service_disabled" width="56" height="56"/>
+    </resources>
+</document>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="UserAutoTileCell" customModule="tts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="148" height="188"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="148" height="188"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rzx-0Y-xD6">
+                        <rect key="frame" x="0.0" y="0.0" width="148" height="128"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="105" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="eHW-NB-pBS">
+                                <rect key="frame" x="21.5" y="44" width="105" height="40"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="eHW-NB-pBS" firstAttribute="centerX" secondItem="Rzx-0Y-xD6" secondAttribute="centerX" id="FO3-td-kQY"/>
+                            <constraint firstItem="eHW-NB-pBS" firstAttribute="centerY" secondItem="Rzx-0Y-xD6" secondAttribute="centerY" id="WhH-4Z-S6O"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZNc-cb-rWg" customClass="SeparatorView" customModule="TTSKit">
+                        <rect key="frame" x="8" y="127" width="132" height="1"/>
+                        <color key="backgroundColor" red="0.2196078431372549" green="0.25490196078431371" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTN-82-Eaa">
+                        <rect key="frame" x="20" y="136" width="108.5" height="36"/>
+                        <string key="text">Mercedes-Benz
+CLS</string>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="XTN-82-Eaa" firstAttribute="top" secondItem="Rzx-0Y-xD6" secondAttribute="bottom" constant="8" symbolic="YES" id="1vv-5w-pUd"/>
+                <constraint firstItem="Rzx-0Y-xD6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6Af-6e-DKp"/>
+                <constraint firstAttribute="trailing" secondItem="Rzx-0Y-xD6" secondAttribute="trailing" id="8Nt-SJ-cFa"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XTN-82-Eaa" secondAttribute="bottom" id="PcE-XY-tej"/>
+                <constraint firstItem="Rzx-0Y-xD6" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="128:188" id="Wqa-u2-jVZ"/>
+                <constraint firstAttribute="trailing" secondItem="ZNc-cb-rWg" secondAttribute="trailing" constant="8" id="eLH-YV-I02"/>
+                <constraint firstItem="XTN-82-Eaa" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="h4W-Ji-HnS"/>
+                <constraint firstItem="ZNc-cb-rWg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="kxX-R2-YoZ"/>
+                <constraint firstItem="XTN-82-Eaa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="n1h-EW-Lgm"/>
+                <constraint firstItem="Rzx-0Y-xD6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oVO-GZ-LfB"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XTN-82-Eaa" secondAttribute="trailing" constant="8" id="v56-l1-ITG"/>
+                <constraint firstItem="ZNc-cb-rWg" firstAttribute="bottom" secondItem="Rzx-0Y-xD6" secondAttribute="bottom" id="xOx-gy-6eV"/>
+            </constraints>
+            <size key="customSize" width="148" height="188"/>
+            <connections>
+                <outlet property="imageView" destination="eHW-NB-pBS" id="iIh-Bq-BVg"/>
+                <outlet property="textLabel" destination="XTN-82-Eaa" id="t9d-6V-HMC"/>
+            </connections>
+            <point key="canvasLocation" x="-15" y="123"/>
+        </collectionViewCell>
+    </objects>
+</document>

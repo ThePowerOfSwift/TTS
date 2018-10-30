@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthSmsConfirmViewController" customModule="tts" customModuleProvider="target">
+            <connections>
+                <outlet property="phoneLabel" destination="ktL-Lk-KsA" id="DoG-2G-YMH"/>
+                <outlet property="smsCodeSpinner" destination="8tr-82-adk" id="is4-zl-cgu"/>
+                <outlet property="textField" destination="VmJ-49-ghi" id="BsV-JR-Suq"/>
+                <outlet property="timerButton" destination="kiS-AX-ZsH" id="oqR-Sd-kAC"/>
+                <outlet property="timerCountdownLabel" destination="ScK-4V-jop" id="KIQ-Jg-Xez"/>
+                <outlet property="timerIconImageView" destination="jgU-XL-B4h" id="Z1c-L2-1d2"/>
+                <outlet property="timerSpinner" destination="qPR-2c-2z0" id="pFf-8U-yc7"/>
+                <outlet property="timerTitleLabel" destination="GrQ-8p-wxV" id="7Ss-mC-mrM"/>
+                <outlet property="view" destination="kPY-Ih-dK6" id="Jq0-oT-lvF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="kPY-Ih-dK6">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите код из смс" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN4-2S-pom">
+                    <rect key="frame" x="16" y="72" width="157" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отправлено на " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6q3-Zk-1p2">
+                    <rect key="frame" x="16" y="100" width="112" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                    <color key="textColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+7 917 397 15 48" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktL-Lk-KsA">
+                    <rect key="frame" x="128" y="100" width="118" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                    <color key="textColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Код" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tek-pV-2hg">
+                    <rect key="frame" x="16" y="145" width="27" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                    <color key="textColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="8tr-82-adk">
+                    <rect key="frame" x="51" y="144" width="20" height="20"/>
+                </activityIndicatorView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00000000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VmJ-49-ghi">
+                    <rect key="frame" x="16" y="163" width="343" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="PfV-9j-WN8"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="one-time-code"/>
+                    <connections>
+                        <action selector="textFieldEditingChangedWithSender:" destination="-1" eventType="editingChanged" id="hy1-R0-b35"/>
+                    </connections>
+                </textField>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="bHZ-OL-Jb1" customClass="SeparatorView" customModule="TTSKit">
+                    <rect key="frame" x="16" y="210" width="359" height="1"/>
+                    <color key="backgroundColor" red="0.21960784310000001" green="0.25490196079999999" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="До повтора SMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrQ-8p-wxV">
+                    <rect key="frame" x="16" y="228" width="116" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                    <color key="textColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScK-4V-jop">
+                    <rect key="frame" x="300" y="228" width="25" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                    <color key="textColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_gobal_timer" translatesAutoresizingMaskIntoConstraints="NO" id="jgU-XL-B4h">
+                    <rect key="frame" x="335" y="225" width="24" height="24"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiS-AX-ZsH">
+                    <rect key="frame" x="0.0" y="215" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Jvl-7a-2ks"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Повторить отправку SMS"/>
+                    <connections>
+                        <action selector="resendButtonTapped" destination="-1" eventType="touchUpInside" id="yp5-3Y-QrU"/>
+                    </connections>
+                </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="qPR-2c-2z0">
+                    <rect key="frame" x="339" y="227" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="0.1450980392" green="0.1647058824" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="2Zu-uu-JqQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6q3-Zk-1p2" secondAttribute="trailing" constant="16" id="5Lg-zb-PeZ"/>
+                <constraint firstItem="8tr-82-adk" firstAttribute="centerY" secondItem="tek-pV-2hg" secondAttribute="centerY" id="68r-Bg-QQ2"/>
+                <constraint firstItem="2Zu-uu-JqQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uN4-2S-pom" secondAttribute="trailing" constant="16" id="7bc-BW-wBd"/>
+                <constraint firstItem="2Zu-uu-JqQ" firstAttribute="trailing" secondItem="kiS-AX-ZsH" secondAttribute="trailing" id="B3H-nU-eDb"/>
+                <constraint firstItem="kiS-AX-ZsH" firstAttribute="leading" secondItem="2Zu-uu-JqQ" secondAttribute="leading" id="BkS-kN-8J5"/>
+                <constraint firstItem="ktL-Lk-KsA" firstAttribute="leading" secondItem="6q3-Zk-1p2" secondAttribute="trailing" id="ERy-DA-Khb"/>
+                <constraint firstItem="jgU-XL-B4h" firstAttribute="centerY" secondItem="GrQ-8p-wxV" secondAttribute="centerY" id="JXC-Dr-oQV"/>
+                <constraint firstItem="GrQ-8p-wxV" firstAttribute="leading" secondItem="2Zu-uu-JqQ" secondAttribute="leading" constant="16" id="Myf-Fd-AtM"/>
+                <constraint firstItem="2Zu-uu-JqQ" firstAttribute="trailing" secondItem="bHZ-OL-Jb1" secondAttribute="trailing" id="NEf-cB-Kkb"/>
+                <constraint firstItem="bHZ-OL-Jb1" firstAttribute="top" secondItem="VmJ-49-ghi" secondAttribute="bottom" constant="3" id="NpS-d0-Xyz"/>
+                <constraint firstItem="kiS-AX-ZsH" firstAttribute="trailing" secondItem="qPR-2c-2z0" secondAttribute="trailing" constant="16" id="PLZ-XN-56j"/>
+                <constraint firstItem="jgU-XL-B4h" firstAttribute="leading" secondItem="ScK-4V-jop" secondAttribute="trailing" constant="10" id="T29-Js-cnU"/>
+                <constraint firstItem="ScK-4V-jop" firstAttribute="centerY" secondItem="jgU-XL-B4h" secondAttribute="centerY" id="Zde-To-p8H"/>
+                <constraint firstItem="ScK-4V-jop" firstAttribute="baseline" secondItem="GrQ-8p-wxV" secondAttribute="baseline" id="ZhV-KQ-z5j"/>
+                <constraint firstItem="2Zu-uu-JqQ" firstAttribute="trailing" secondItem="jgU-XL-B4h" secondAttribute="trailing" constant="16" id="Zy2-0i-MRd"/>
+                <constraint firstItem="2Zu-uu-JqQ" firstAttribute="trailing" secondItem="VmJ-49-ghi" secondAttribute="trailing" constant="16" id="a6W-0l-0GS"/>
+                <constraint firstItem="uN4-2S-pom" firstAttribute="top" secondItem="2Zu-uu-JqQ" secondAttribute="top" constant="8" id="bJa-Ub-a4D"/>
+                <constraint firstItem="6q3-Zk-1p2" firstAttribute="top" secondItem="uN4-2S-pom" secondAttribute="bottom" constant="7" id="bhh-Um-IpJ"/>
+                <constraint firstItem="kiS-AX-ZsH" firstAttribute="top" secondItem="bHZ-OL-Jb1" secondAttribute="bottom" constant="4" id="eyh-pO-xOt"/>
+                <constraint firstItem="VmJ-49-ghi" firstAttribute="leading" secondItem="2Zu-uu-JqQ" secondAttribute="leading" constant="16" id="ffd-9c-zPp"/>
+                <constraint firstItem="tek-pV-2hg" firstAttribute="top" secondItem="6q3-Zk-1p2" secondAttribute="bottom" constant="27" id="hrl-Lb-gXt"/>
+                <constraint firstItem="bHZ-OL-Jb1" firstAttribute="leading" secondItem="2Zu-uu-JqQ" secondAttribute="leading" constant="16" id="i1J-oG-m7z"/>
+                <constraint firstItem="tek-pV-2hg" firstAttribute="leading" secondItem="2Zu-uu-JqQ" secondAttribute="leading" constant="16" id="jWu-Bf-mSk"/>
+                <constraint firstItem="6q3-Zk-1p2" firstAttribute="leading" secondItem="2Zu-uu-JqQ" secondAttribute="leading" constant="16" id="je3-Um-8Ht"/>
+                <constraint firstItem="ktL-Lk-KsA" firstAttribute="baseline" secondItem="6q3-Zk-1p2" secondAttribute="baseline" id="rKc-bn-zt5"/>
+                <constraint firstItem="jgU-XL-B4h" firstAttribute="top" secondItem="bHZ-OL-Jb1" secondAttribute="bottom" constant="14" id="uMd-bL-J69"/>
+                <constraint firstItem="uN4-2S-pom" firstAttribute="leading" secondItem="2Zu-uu-JqQ" secondAttribute="leading" constant="16" id="unY-M1-7Tq"/>
+                <constraint firstItem="qPR-2c-2z0" firstAttribute="centerY" secondItem="kiS-AX-ZsH" secondAttribute="centerY" id="vA7-zh-aIE"/>
+                <constraint firstItem="8tr-82-adk" firstAttribute="leading" secondItem="tek-pV-2hg" secondAttribute="trailing" constant="8" symbolic="YES" id="wnF-jl-Qn0"/>
+                <constraint firstItem="VmJ-49-ghi" firstAttribute="top" secondItem="tek-pV-2hg" secondAttribute="bottom" id="xeW-Ib-XQn"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="2Zu-uu-JqQ"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_gobal_timer" width="24" height="24"/>
+    </resources>
+</document>

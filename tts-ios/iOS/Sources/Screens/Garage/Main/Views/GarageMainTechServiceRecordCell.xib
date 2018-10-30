@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZBs-I1-bdS" customClass="GarageMainTechServiceRecordCell" customModule="tts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_global_cartime" translatesAutoresizingMaskIntoConstraints="NO" id="Wiv-G9-SJT">
+                        <rect key="frame" x="18" y="14" width="36" height="36"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2K-Mw-Ydr">
+                        <rect key="frame" x="72" y="0.0" width="248" height="64"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ждем 24 апреля в 11:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FE6-dA-QHN">
+                                <rect key="frame" x="0.0" y="10" width="183.5" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Казань, пр. Победы, 194" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtl-Lb-hSI">
+                                <rect key="frame" x="0.0" y="36" width="171.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Jtl-Lb-hSI" firstAttribute="leading" secondItem="e2K-Mw-Ydr" secondAttribute="leading" id="7FW-Dj-MQ9"/>
+                            <constraint firstItem="FE6-dA-QHN" firstAttribute="top" secondItem="e2K-Mw-Ydr" secondAttribute="top" constant="10" id="88W-5i-7is"/>
+                            <constraint firstAttribute="bottom" secondItem="Jtl-Lb-hSI" secondAttribute="bottom" constant="10" id="ZhJ-kg-jAD"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Jtl-Lb-hSI" secondAttribute="trailing" constant="20" symbolic="YES" id="cbO-vC-ww5"/>
+                            <constraint firstItem="FE6-dA-QHN" firstAttribute="leading" secondItem="e2K-Mw-Ydr" secondAttribute="leading" id="k9p-fa-J3e"/>
+                            <constraint firstItem="Jtl-Lb-hSI" firstAttribute="top" secondItem="FE6-dA-QHN" secondAttribute="bottom" constant="8" symbolic="YES" id="nNE-SQ-idl"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FE6-dA-QHN" secondAttribute="trailing" constant="20" symbolic="YES" id="xfw-L6-bOg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Cbb-dY-uDr" firstAttribute="top" secondItem="e2K-Mw-Ydr" secondAttribute="top" id="24p-TB-5Nb"/>
+                <constraint firstItem="e2K-Mw-Ydr" firstAttribute="leading" secondItem="Cbb-dY-uDr" secondAttribute="leading" constant="72" id="4Rj-eb-KC6"/>
+                <constraint firstItem="Cbb-dY-uDr" firstAttribute="trailing" secondItem="e2K-Mw-Ydr" secondAttribute="trailing" id="VJc-oI-ArI"/>
+                <constraint firstItem="Wiv-G9-SJT" firstAttribute="top" secondItem="Cbb-dY-uDr" secondAttribute="top" constant="14" id="dyA-s0-ytu"/>
+                <constraint firstItem="Wiv-G9-SJT" firstAttribute="centerX" secondItem="Cbb-dY-uDr" secondAttribute="leading" constant="36" id="kim-GS-JAK"/>
+                <constraint firstItem="e2K-Mw-Ydr" firstAttribute="bottom" secondItem="Cbb-dY-uDr" secondAttribute="bottom" id="wSq-dq-f1R"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Cbb-dY-uDr"/>
+            <size key="customSize" width="320" height="65"/>
+            <connections>
+                <outlet property="textLabel" destination="Jtl-Lb-hSI" id="Uze-d6-FYh"/>
+                <outlet property="titleLabel" destination="FE6-dA-QHN" id="CzJ-Rq-e5H"/>
+            </connections>
+            <point key="canvasLocation" x="-101" y="68.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icn_global_cartime" width="36" height="36"/>
+    </resources>
+</document>

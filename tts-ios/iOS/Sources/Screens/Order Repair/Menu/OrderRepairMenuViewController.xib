@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderRepairMenuViewController" customModule="tts" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="DJD-sJ-Ues" id="keg-8X-9kp"/>
+                <outlet property="submitButton" destination="1sw-VU-c2Y" id="LX8-sX-ztc"/>
+                <outlet property="submitButtonHeight" destination="zGn-PN-fB2" id="QMN-3p-lWB"/>
+                <outlet property="view" destination="yVc-Pk-qwE" id="BfB-nh-U3m"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="yVc-Pk-qwE">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="DJD-sJ-Ues">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kqF-WY-0Tp">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sw-VU-c2Y" customClass="SubmitButton" customModule="tts" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="615" width="375" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="zGn-PN-fB2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <state key="normal" title="Подтвердить">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" red="0.43921568630000002" green="0.48627450979999998" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="submitButtonTapped" destination="-1" eventType="touchUpInside" id="56o-Jq-2aa"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.1450980392" green="0.1647058824" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1sw-VU-c2Y" secondAttribute="trailing" id="83v-cf-2s3"/>
+                <constraint firstItem="1sw-VU-c2Y" firstAttribute="leading" secondItem="yVc-Pk-qwE" secondAttribute="leading" id="DFR-rz-exX"/>
+                <constraint firstAttribute="trailing" secondItem="DJD-sJ-Ues" secondAttribute="trailing" id="NDy-1H-etE"/>
+                <constraint firstItem="DJD-sJ-Ues" firstAttribute="top" secondItem="yVc-Pk-qwE" secondAttribute="top" id="PpZ-pg-7lK"/>
+                <constraint firstAttribute="bottom" secondItem="DJD-sJ-Ues" secondAttribute="bottom" id="V43-Wa-UFF"/>
+                <constraint firstItem="DJD-sJ-Ues" firstAttribute="leading" secondItem="yVc-Pk-qwE" secondAttribute="leading" id="lth-GI-KZg"/>
+                <constraint firstAttribute="bottom" secondItem="1sw-VU-c2Y" secondAttribute="bottom" id="rqd-gE-acn"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="mGN-qp-N7x"/>
+        </view>
+    </objects>
+</document>

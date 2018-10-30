@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DSd-jL-izE" customClass="ServiceCentersListMyCell" customModule="tts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d90-0N-lh4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IvX-cS-ecL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uiu-VT-m9O">
+                                        <rect key="frame" x="8" y="12" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="aVd-L6-r1B"/>
+                                            <constraint firstAttribute="height" constant="40" id="eW2-XQ-YYl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Казань, пр. Победы, 194" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9Z-2b-hIb">
+                                        <rect key="frame" x="64" y="23.5" width="171.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron" translatesAutoresizingMaskIntoConstraints="NO" id="lQz-Uj-uZY">
+                                        <rect key="frame" x="294" y="24.5" width="10" height="15"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="D9Z-2b-hIb" firstAttribute="leading" secondItem="IvX-cS-ecL" secondAttribute="leading" constant="64" id="DVf-Sm-LgM"/>
+                                    <constraint firstItem="uiu-VT-m9O" firstAttribute="leading" secondItem="IvX-cS-ecL" secondAttribute="leading" constant="8" id="DvL-Td-kfd"/>
+                                    <constraint firstItem="lQz-Uj-uZY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="D9Z-2b-hIb" secondAttribute="trailing" constant="8" symbolic="YES" id="QNc-vp-A8h"/>
+                                    <constraint firstItem="uiu-VT-m9O" firstAttribute="centerY" secondItem="IvX-cS-ecL" secondAttribute="centerY" id="l4r-bX-zIA"/>
+                                    <constraint firstItem="D9Z-2b-hIb" firstAttribute="centerY" secondItem="IvX-cS-ecL" secondAttribute="centerY" id="mzI-FY-bMi"/>
+                                    <constraint firstItem="lQz-Uj-uZY" firstAttribute="centerY" secondItem="IvX-cS-ecL" secondAttribute="centerY" id="r3E-cX-Ita"/>
+                                    <constraint firstAttribute="trailing" secondItem="lQz-Uj-uZY" secondAttribute="trailing" constant="16" id="rRn-fT-bXN"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zU-00-JHA">
+                                <rect key="frame" x="0.0" y="64" width="320" height="52"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j9q-pC-Sf7">
+                                        <rect key="frame" x="8" y="6" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="iri-cF-K0v"/>
+                                            <constraint firstAttribute="height" constant="40" id="mrS-RS-Go2"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Казань, пр. Победы, 194" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvA-XV-car">
+                                        <rect key="frame" x="64" y="17.5" width="187" height="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="DvA-XV-car" firstAttribute="centerY" secondItem="5zU-00-JHA" secondAttribute="centerY" id="8LD-rV-W3V"/>
+                                    <constraint firstItem="j9q-pC-Sf7" firstAttribute="centerY" secondItem="5zU-00-JHA" secondAttribute="centerY" id="8zx-7w-JdD"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DvA-XV-car" secondAttribute="trailing" constant="16" id="Rd3-18-dPP"/>
+                                    <constraint firstItem="DvA-XV-car" firstAttribute="leading" secondItem="5zU-00-JHA" secondAttribute="leading" constant="64" id="U5h-JF-gIT"/>
+                                    <constraint firstItem="j9q-pC-Sf7" firstAttribute="leading" secondItem="5zU-00-JHA" secondAttribute="leading" constant="8" id="wGk-le-f0G"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IvX-cS-ecL" firstAttribute="top" secondItem="d90-0N-lh4" secondAttribute="top" id="15d-a4-yjm"/>
+                            <constraint firstAttribute="trailing" secondItem="5zU-00-JHA" secondAttribute="trailing" id="671-lW-Uld"/>
+                            <constraint firstItem="5zU-00-JHA" firstAttribute="top" secondItem="IvX-cS-ecL" secondAttribute="bottom" id="6Jc-hG-gMU"/>
+                            <constraint firstAttribute="bottom" secondItem="5zU-00-JHA" secondAttribute="bottom" id="Lwd-gO-s5c"/>
+                            <constraint firstAttribute="trailing" secondItem="IvX-cS-ecL" secondAttribute="trailing" id="NWZ-7Q-9jy"/>
+                            <constraint firstItem="5zU-00-JHA" firstAttribute="leading" secondItem="d90-0N-lh4" secondAttribute="leading" id="XmC-8O-miP"/>
+                            <constraint firstItem="IvX-cS-ecL" firstAttribute="height" secondItem="5zU-00-JHA" secondAttribute="height" multiplier="64:52" id="cBL-Eu-nmM"/>
+                            <constraint firstItem="IvX-cS-ecL" firstAttribute="leading" secondItem="d90-0N-lh4" secondAttribute="leading" id="ig1-K3-PeD"/>
+                            <constraint firstAttribute="height" constant="116" id="xsx-OO-can"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="d90-0N-lh4" firstAttribute="leading" secondItem="DSd-jL-izE" secondAttribute="leading" id="2uR-Rc-w21"/>
+                <constraint firstItem="d90-0N-lh4" firstAttribute="top" secondItem="DSd-jL-izE" secondAttribute="top" id="WGd-Tq-ccb"/>
+                <constraint firstAttribute="trailing" secondItem="d90-0N-lh4" secondAttribute="trailing" id="agG-Bf-7Ir"/>
+                <constraint firstAttribute="bottom" secondItem="d90-0N-lh4" secondAttribute="bottom" priority="750" id="bDs-BP-gqx"/>
+            </constraints>
+            <connections>
+                <outlet property="autoImageView" destination="j9q-pC-Sf7" id="fml-4N-RUO"/>
+                <outlet property="autoTitleLabel" destination="DvA-XV-car" id="Jgg-mY-rXv"/>
+                <outlet property="containerView" destination="d90-0N-lh4" id="8nN-vi-Be9"/>
+                <outlet property="serviceCenterImageView" destination="uiu-VT-m9O" id="hus-dS-stc"/>
+                <outlet property="serviceCenterTitleLabel" destination="D9Z-2b-hIb" id="joU-36-vDu"/>
+            </connections>
+            <point key="canvasLocation" x="-36" y="116"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="chevron" width="10" height="15"/>
+    </resources>
+</document>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GarageAutoInfoViewController" customModule="tts" customModuleProvider="target">
+            <connections>
+                <outlet property="archiveButton" destination="7Ar-HM-Hrq" id="wDR-yW-9Km"/>
+                <outlet property="configurationLabel" destination="kLA-uh-Ibx" id="5wS-QS-XYO"/>
+                <outlet property="imageView" destination="UOG-t2-5wg" id="UOH-wj-h2u"/>
+                <outlet property="numberPlateNumberLabel" destination="MSx-vd-bq1" id="ewS-cT-8yi"/>
+                <outlet property="numberPlateRegionLabel" destination="jeC-Og-OAk" id="vfT-MW-MMG"/>
+                <outlet property="titleLabel" destination="LRp-VF-tuO" id="ub1-vg-scN"/>
+                <outlet property="view" destination="61f-De-RFK" id="NRT-5v-cs1"/>
+                <outlet property="vinLabel" destination="tQe-DQ-1Ta" id="caQ-JF-Mvg"/>
+                <outlet property="yearLabel" destination="Nii-fW-rk4" id="XJz-Qa-LJ4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="61f-De-RFK">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TvN-uX-xpd">
+                    <rect key="frame" x="0.0" y="55.5" width="375" height="100.5"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="105" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="UOG-t2-5wg">
+                            <rect key="frame" x="135" y="30.5" width="105" height="40"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="UOG-t2-5wg" firstAttribute="centerX" secondItem="TvN-uX-xpd" secondAttribute="centerX" id="R9r-lj-KHe"/>
+                        <constraint firstItem="UOG-t2-5wg" firstAttribute="centerY" secondItem="TvN-uX-xpd" secondAttribute="centerY" id="UEJ-c3-SCE"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mercedes-Benz CLS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRp-VF-tuO">
+                    <rect key="frame" x="104" y="35" width="167" height="20.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNb-bn-pPS">
+                    <rect key="frame" x="0.0" y="20" width="51" height="51"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
+                    <state key="normal" image="icn_close"/>
+                    <connections>
+                        <action selector="closeButtonTapped" destination="-1" eventType="touchUpInside" id="3UE-kl-0Az"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="number_plate" translatesAutoresizingMaskIntoConstraints="NO" id="jZm-KC-Plf">
+                    <rect key="frame" x="94.5" y="156" width="186" height="56"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E 400 КХ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSx-vd-bq1">
+                    <rect key="frame" x="116.5" y="170" width="93" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="93" id="mkl-ak-QfD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" red="0.098039215690000001" green="0.1058823529" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jlo-7E-Fwp">
+                    <rect key="frame" x="223.5" y="185" width="20" height="11"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
+                    <color key="textColor" red="0.098039215686274508" green="0.10588235294117647" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="777" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeC-Og-OAk">
+                    <rect key="frame" x="223" y="164" width="35.5" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" red="0.098039215690000001" green="0.1058823529" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akt-WX-cfX">
+                    <rect key="frame" x="16" y="220" width="24" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                    <color key="textColor" red="0.4392156862745098" green="0.48627450980392156" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XW8ZZX61ZCG030716" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQe-DQ-1Ta">
+                    <rect key="frame" x="16" y="241" width="177" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Год выпуска" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8w-oo-ZtM">
+                    <rect key="frame" x="263" y="220" width="87" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                    <color key="textColor" red="0.43921568630000002" green="0.48627450979999998" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nii-fW-rk4">
+                    <rect key="frame" x="263" y="241" width="38" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комплектация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5z-Lc-5RK">
+                    <rect key="frame" x="16" y="274" width="103" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                    <color key="textColor" red="0.43921568630000002" green="0.48627450979999998" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLS 400 4MATIC AT CLS 400 4MATIC AT CLS 400 4MATIC AT " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLA-uh-Ibx">
+                    <rect key="frame" x="16" y="295" width="317.5" height="41"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="kQh-P7-o7S" customClass="SeparatorView" customModule="TTSKit">
+                    <rect key="frame" x="16" y="356" width="359" height="1"/>
+                    <color key="backgroundColor" red="0.20392156862745098" green="0.23137254901960785" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ar-HM-Hrq" customClass="GarageAutoArchiveButton" customModule="tts" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="357" width="375" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="Vib-qb-CEe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Перенести авто в архив" image="icn_archive"/>
+                    <connections>
+                        <action selector="archiveButtonTapped" destination="-1" eventType="touchUpInside" id="GPr-dL-dCY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.14509803921568626" green="0.16470588235294117" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="7Ar-HM-Hrq" firstAttribute="leading" secondItem="61f-De-RFK" secondAttribute="leading" id="506-OK-VzW"/>
+                <constraint firstAttribute="trailing" secondItem="7Ar-HM-Hrq" secondAttribute="trailing" id="7W7-Tf-iBo"/>
+                <constraint firstItem="Nii-fW-rk4" firstAttribute="top" secondItem="H8w-oo-ZtM" secondAttribute="bottom" constant="3" id="AKV-o0-13O"/>
+                <constraint firstItem="tQe-DQ-1Ta" firstAttribute="leading" secondItem="61f-De-RFK" secondAttribute="leading" constant="16" id="Bn3-1z-1w4"/>
+                <constraint firstItem="MSx-vd-bq1" firstAttribute="centerY" secondItem="jZm-KC-Plf" secondAttribute="centerY" constant="-2" id="ESu-ER-I0D"/>
+                <constraint firstAttribute="trailing" secondItem="H8w-oo-ZtM" secondAttribute="leading" constant="112" id="FI2-TH-Y4y"/>
+                <constraint firstItem="jZm-KC-Plf" firstAttribute="top" secondItem="Y5V-oo-mMc" secondAttribute="top" constant="136" id="H3s-TY-7fQ"/>
+                <constraint firstItem="jeC-Og-OAk" firstAttribute="top" secondItem="jZm-KC-Plf" secondAttribute="top" constant="8" id="HVv-7i-ATN"/>
+                <constraint firstItem="TvN-uX-xpd" firstAttribute="top" secondItem="LRp-VF-tuO" secondAttribute="bottom" id="Ips-ne-vDw"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Nii-fW-rk4" secondAttribute="trailing" constant="20" symbolic="YES" id="JAs-ux-n38"/>
+                <constraint firstItem="akt-WX-cfX" firstAttribute="top" secondItem="jZm-KC-Plf" secondAttribute="bottom" constant="8" symbolic="YES" id="JZQ-vB-YLU"/>
+                <constraint firstItem="kQh-P7-o7S" firstAttribute="leading" secondItem="61f-De-RFK" secondAttribute="leading" constant="16" id="Khn-EZ-Rch"/>
+                <constraint firstItem="kLA-uh-Ibx" firstAttribute="leading" secondItem="61f-De-RFK" secondAttribute="leading" constant="16" id="Lfe-z7-SSE"/>
+                <constraint firstItem="jZm-KC-Plf" firstAttribute="top" secondItem="TvN-uX-xpd" secondAttribute="bottom" id="OJK-sG-jvr"/>
+                <constraint firstItem="o5z-Lc-5RK" firstAttribute="top" secondItem="tQe-DQ-1Ta" secondAttribute="bottom" constant="12" id="PDm-Nv-GiH"/>
+                <constraint firstItem="jeC-Og-OAk" firstAttribute="trailing" secondItem="jZm-KC-Plf" secondAttribute="trailing" constant="-22" id="PPR-jE-wg2"/>
+                <constraint firstItem="Jlo-7E-Fwp" firstAttribute="bottom" secondItem="jZm-KC-Plf" secondAttribute="bottom" constant="-16" id="Pc6-h1-wKR"/>
+                <constraint firstItem="JNb-bn-pPS" firstAttribute="leading" secondItem="61f-De-RFK" secondAttribute="leading" id="RaO-aL-B8m"/>
+                <constraint firstItem="H8w-oo-ZtM" firstAttribute="baseline" secondItem="akt-WX-cfX" secondAttribute="baseline" id="SBN-VR-kTT"/>
+                <constraint firstItem="tQe-DQ-1Ta" firstAttribute="top" secondItem="akt-WX-cfX" secondAttribute="bottom" constant="3" id="XfH-6Z-1UT"/>
+                <constraint firstItem="jZm-KC-Plf" firstAttribute="centerX" secondItem="61f-De-RFK" secondAttribute="centerX" id="YDc-nb-zqm"/>
+                <constraint firstItem="jeC-Og-OAk" firstAttribute="leading" secondItem="Jlo-7E-Fwp" secondAttribute="leading" id="YPf-lm-zgP"/>
+                <constraint firstItem="7Ar-HM-Hrq" firstAttribute="top" secondItem="kQh-P7-o7S" secondAttribute="bottom" id="bGj-Pn-0ev"/>
+                <constraint firstAttribute="trailing" secondItem="TvN-uX-xpd" secondAttribute="trailing" id="big-44-w99"/>
+                <constraint firstItem="kQh-P7-o7S" firstAttribute="top" secondItem="kLA-uh-Ibx" secondAttribute="bottom" constant="20" id="bjY-LS-SKr"/>
+                <constraint firstItem="LRp-VF-tuO" firstAttribute="centerY" secondItem="JNb-bn-pPS" secondAttribute="centerY" id="dIm-XF-Fti"/>
+                <constraint firstItem="akt-WX-cfX" firstAttribute="leading" secondItem="61f-De-RFK" secondAttribute="leading" constant="16" id="dv2-vh-4fi"/>
+                <constraint firstItem="Jlo-7E-Fwp" firstAttribute="trailing" secondItem="jZm-KC-Plf" secondAttribute="trailing" constant="-37" id="e7s-b2-bE9"/>
+                <constraint firstItem="kLA-uh-Ibx" firstAttribute="top" secondItem="o5z-Lc-5RK" secondAttribute="bottom" constant="3" id="fdG-c0-7kd"/>
+                <constraint firstItem="LRp-VF-tuO" firstAttribute="centerX" secondItem="61f-De-RFK" secondAttribute="centerX" priority="750" id="gYG-IC-Tud"/>
+                <constraint firstItem="o5z-Lc-5RK" firstAttribute="leading" secondItem="61f-De-RFK" secondAttribute="leading" constant="16" id="gdn-sn-PlO"/>
+                <constraint firstItem="TvN-uX-xpd" firstAttribute="leading" secondItem="61f-De-RFK" secondAttribute="leading" id="iM3-Sc-2MP"/>
+                <constraint firstItem="LRp-VF-tuO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JNb-bn-pPS" secondAttribute="trailing" constant="8" symbolic="YES" id="jqE-uR-7nx"/>
+                <constraint firstAttribute="trailing" secondItem="kQh-P7-o7S" secondAttribute="trailing" id="o7G-Gt-uAd"/>
+                <constraint firstItem="Nii-fW-rk4" firstAttribute="leading" secondItem="H8w-oo-ZtM" secondAttribute="leading" id="oaK-7k-NAB"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kLA-uh-Ibx" secondAttribute="trailing" constant="16" id="qBr-2l-SeD"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LRp-VF-tuO" secondAttribute="trailing" constant="16" id="qOw-08-K3a"/>
+                <constraint firstItem="JNb-bn-pPS" firstAttribute="top" secondItem="Y5V-oo-mMc" secondAttribute="top" id="qaL-lQ-SLa"/>
+                <constraint firstItem="MSx-vd-bq1" firstAttribute="leading" secondItem="jZm-KC-Plf" secondAttribute="leading" constant="22" id="uQz-NR-SJY"/>
+                <constraint firstItem="TvN-uX-xpd" firstAttribute="centerX" secondItem="61f-De-RFK" secondAttribute="centerX" id="xjz-F9-IKw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Y5V-oo-mMc"/>
+            <point key="canvasLocation" x="90" y="156"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icn_archive" width="23" height="22"/>
+        <image name="icn_close" width="19" height="19"/>
+        <image name="number_plate" width="186" height="56"/>
+    </resources>
+</document>

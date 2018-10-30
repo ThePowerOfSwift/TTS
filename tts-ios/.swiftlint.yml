@@ -1,0 +1,35 @@
+# Find all the available rules by running:
+# swiftlint rules
+disabled_rules: # rule identifiers to exclude from running
+    - trailing_whitespace
+    - identifier_name
+    - line_length
+    - file_length
+    - function_body_length
+    - type_body_length
+    - function_parameter_count
+    - type_name
+    - nesting
+
+opt_in_rules: # some rules are only opt-in
+    - contains_over_first_not_nil
+    - convenience_type
+    - empty_xctest_method
+    - explicit_init
+    - first_where
+    - lower_acl_than_parent
+    - override_in_extension
+    - prefixed_toplevel_constant
+    - private_action
+
+included: # paths to include during linting. `--path` is ignored if present.
+    - iOS
+
+custom_rules:
+  safe_animations:
+    included: ".*\\.swift"
+    excluded: ".*Test\\.swift"
+    name: "Safe Animations"
+    regex: "animated: true" # matching pattern
+    message: "Replace `animated: true` with `animated: IsAnimationAllowed()` to conditionaly disable animations when high CPU or low battery	 is detected."
+    severity: warning

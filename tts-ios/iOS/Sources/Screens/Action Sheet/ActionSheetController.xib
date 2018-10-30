@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionSheetController" customModule="tts" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="Mkl-QQ-Mci" id="n4w-KP-Ao0"/>
+                <outlet property="scrollContentView" destination="L01-IA-Vpx" id="0Qw-0b-mBf"/>
+                <outlet property="scrollContentViewHeight" destination="uGl-Qa-u1J" id="CR9-dG-Pht"/>
+                <outlet property="scrollView" destination="sTU-tp-R4l" id="kUX-cm-zwE"/>
+                <outlet property="view" destination="xMK-Qw-NWa" id="RB2-1f-FwA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xMK-Qw-NWa">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6J-8c-aZ5">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3Q2-zN-duV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTU-tp-R4l">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L01-IA-Vpx">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <subviews>
+                                <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mkl-QQ-Mci">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Mkl-QQ-Mci" secondAttribute="trailing" id="00m-Gf-3Xt"/>
+                                <constraint firstAttribute="bottom" secondItem="Mkl-QQ-Mci" secondAttribute="bottom" id="7kN-nT-Ce4"/>
+                                <constraint firstItem="Mkl-QQ-Mci" firstAttribute="leading" secondItem="L01-IA-Vpx" secondAttribute="leading" id="agW-Zm-0pw"/>
+                                <constraint firstItem="Mkl-QQ-Mci" firstAttribute="top" relation="greaterThanOrEqual" secondItem="L01-IA-Vpx" secondAttribute="top" id="hHt-5N-6fU"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="L01-IA-Vpx" firstAttribute="width" secondItem="sTU-tp-R4l" secondAttribute="width" id="OVB-aq-ESf"/>
+                        <constraint firstItem="L01-IA-Vpx" firstAttribute="top" secondItem="sTU-tp-R4l" secondAttribute="top" id="YJA-WR-Ps1"/>
+                        <constraint firstAttribute="bottom" secondItem="L01-IA-Vpx" secondAttribute="bottom" id="a2e-Kc-99q"/>
+                        <constraint firstAttribute="trailing" secondItem="L01-IA-Vpx" secondAttribute="trailing" id="aQL-nS-KSb"/>
+                        <constraint firstItem="L01-IA-Vpx" firstAttribute="height" secondItem="sTU-tp-R4l" secondAttribute="height" priority="250" id="uGl-Qa-u1J"/>
+                        <constraint firstItem="L01-IA-Vpx" firstAttribute="leading" secondItem="sTU-tp-R4l" secondAttribute="leading" id="yHy-tN-08T"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="G6J-8c-aZ5" secondAttribute="trailing" id="1aH-SZ-OBW"/>
+                <constraint firstAttribute="bottom" secondItem="sTU-tp-R4l" secondAttribute="bottom" id="1dQ-Wz-hPu"/>
+                <constraint firstAttribute="trailing" secondItem="sTU-tp-R4l" secondAttribute="trailing" id="2bk-ik-lpG"/>
+                <constraint firstItem="G6J-8c-aZ5" firstAttribute="top" secondItem="sTU-tp-R4l" secondAttribute="top" id="4Ep-JE-Mff"/>
+                <constraint firstItem="sTU-tp-R4l" firstAttribute="leading" secondItem="xMK-Qw-NWa" secondAttribute="leading" id="EdC-qm-oFS"/>
+                <constraint firstAttribute="bottom" secondItem="G6J-8c-aZ5" secondAttribute="bottom" id="Srf-D9-nNg"/>
+                <constraint firstItem="G6J-8c-aZ5" firstAttribute="leading" secondItem="xMK-Qw-NWa" secondAttribute="leading" id="rgb-SW-3Kb"/>
+                <constraint firstItem="sTU-tp-R4l" firstAttribute="top" secondItem="xMK-Qw-NWa" secondAttribute="top" id="tDn-Ru-ofH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="mTw-Ys-fzX"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

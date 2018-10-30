@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ServiceCentersListServiceCell" customModule="tts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2b-Yb-9bT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OMJ-Hq-hTy">
+                                <rect key="frame" x="16" y="12" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="UON-6Y-mPe"/>
+                                    <constraint firstAttribute="height" constant="40" id="dnR-fP-b0r"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Казань, пр. Ибрагимова, 48" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8K-fI-eCM">
+                                <rect key="frame" x="72" y="23" width="214" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="chevron" translatesAutoresizingMaskIntoConstraints="NO" id="s09-Ox-JSk">
+                                <rect key="frame" x="294" y="24.5" width="10" height="15"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="s09-Ox-JSk" firstAttribute="centerY" secondItem="d2b-Yb-9bT" secondAttribute="centerY" id="7PG-fd-aB5"/>
+                            <constraint firstAttribute="trailing" secondItem="s09-Ox-JSk" secondAttribute="trailing" constant="16" id="Hld-IO-RUn"/>
+                            <constraint firstItem="t8K-fI-eCM" firstAttribute="centerY" secondItem="d2b-Yb-9bT" secondAttribute="centerY" id="Y5z-uh-lLY"/>
+                            <constraint firstItem="s09-Ox-JSk" firstAttribute="leading" secondItem="t8K-fI-eCM" secondAttribute="trailing" constant="8" symbolic="YES" id="b6a-Zy-ISD"/>
+                            <constraint firstItem="t8K-fI-eCM" firstAttribute="leading" secondItem="d2b-Yb-9bT" secondAttribute="leading" constant="72" id="cpq-xo-b6J"/>
+                            <constraint firstItem="OMJ-Hq-hTy" firstAttribute="leading" secondItem="d2b-Yb-9bT" secondAttribute="leading" constant="16" id="tOY-cn-m62"/>
+                            <constraint firstItem="OMJ-Hq-hTy" firstAttribute="centerY" secondItem="d2b-Yb-9bT" secondAttribute="centerY" id="umZ-5U-K09"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhT-7f-gil">
+                        <rect key="frame" x="16" y="64" width="304" height="48"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="v0g-5k-ZPw">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qRE-4i-TCQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="v0g-5k-ZPw" secondAttribute="trailing" priority="250" constant="16" id="7up-e0-qfS"/>
+                            <constraint firstItem="v0g-5k-ZPw" firstAttribute="leading" secondItem="zhT-7f-gil" secondAttribute="leading" id="dBP-8W-rpe"/>
+                            <constraint firstItem="v0g-5k-ZPw" firstAttribute="top" secondItem="zhT-7f-gil" secondAttribute="top" id="y6H-px-3BT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="zhT-7f-gil" secondAttribute="trailing" id="1tn-u1-KcE"/>
+                <constraint firstItem="d2b-Yb-9bT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ihq-E5-9FT"/>
+                <constraint firstAttribute="bottom" secondItem="zhT-7f-gil" secondAttribute="bottom" priority="750" id="SzA-z3-eC4"/>
+                <constraint firstItem="zhT-7f-gil" firstAttribute="top" secondItem="d2b-Yb-9bT" secondAttribute="bottom" id="Tea-23-ydw"/>
+                <constraint firstAttribute="trailing" secondItem="d2b-Yb-9bT" secondAttribute="trailing" id="bdt-1G-YIE"/>
+                <constraint firstItem="d2b-Yb-9bT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qho-gK-5EG"/>
+                <constraint firstItem="zhT-7f-gil" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="qq9-AJ-Rrm"/>
+                <constraint firstItem="zhT-7f-gil" firstAttribute="height" secondItem="d2b-Yb-9bT" secondAttribute="height" multiplier="48:64" id="zzD-tl-T5M"/>
+            </constraints>
+            <connections>
+                <outlet property="serviceCenterImageView" destination="OMJ-Hq-hTy" id="Ig9-R8-pcd"/>
+                <outlet property="serviceCenterTextLabel" destination="t8K-fI-eCM" id="Uz9-LW-B2r"/>
+                <outlet property="stackView" destination="v0g-5k-ZPw" id="nuL-5S-Hhb"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="chevron" width="10" height="15"/>
+    </resources>
+</document>

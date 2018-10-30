@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderTechServiceVariantsViewController" customModule="tts" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="75q-jk-cr0" id="ExA-S0-ao1"/>
+                <outlet property="nextButton" destination="g2L-nN-Sgd" id="xWz-1c-9cj"/>
+                <outlet property="submitButton" destination="RHt-Yd-JFL" id="ijC-b3-n52"/>
+                <outlet property="submitButtonHeight" destination="k7Y-dN-K4i" id="mGL-g6-Vrf"/>
+                <outlet property="view" destination="uoR-NK-vPo" id="lLr-2a-rGg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="uoR-NK-vPo">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="75q-jk-cr0">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Zp-Ar-PLA">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2L-nN-Sgd" customClass="OrderTechServiceVariantNextButton" customModule="tts" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="555" width="375" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="cFM-RF-OYy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Ещё варианты">
+                        <color key="titleColor" white="0.46999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" red="0.43921568630000002" green="0.48627450979999998" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="nextButtonTapped" destination="-1" eventType="touchUpInside" id="j9m-dP-N2P"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHt-Yd-JFL" customClass="SubmitButton" customModule="tts" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="615" width="375" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="k7Y-dN-K4i"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <state key="normal" title="Подтвердить">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" red="0.43921568630000002" green="0.48627450979999998" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="submitButtonTapped" destination="-1" eventType="touchUpInside" id="Oad-0l-H3O"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.1450980392" green="0.1647058824" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="75q-jk-cr0" secondAttribute="trailing" id="5RJ-D4-DPw"/>
+                <constraint firstAttribute="trailing" secondItem="RHt-Yd-JFL" secondAttribute="trailing" id="AIe-dz-pa9"/>
+                <constraint firstItem="75q-jk-cr0" firstAttribute="leading" secondItem="uoR-NK-vPo" secondAttribute="leading" id="AOw-ao-NIz"/>
+                <constraint firstItem="75q-jk-cr0" firstAttribute="bottom" secondItem="RHt-Yd-JFL" secondAttribute="bottom" id="EHg-Rx-1zK"/>
+                <constraint firstItem="g2L-nN-Sgd" firstAttribute="leading" secondItem="uoR-NK-vPo" secondAttribute="leading" id="FQD-ad-TKp"/>
+                <constraint firstAttribute="trailing" secondItem="g2L-nN-Sgd" secondAttribute="trailing" id="HsV-be-vlB"/>
+                <constraint firstItem="RHt-Yd-JFL" firstAttribute="leading" secondItem="uoR-NK-vPo" secondAttribute="leading" id="Ra3-KV-1CB"/>
+                <constraint firstItem="RHt-Yd-JFL" firstAttribute="top" secondItem="g2L-nN-Sgd" secondAttribute="bottom" constant="8" symbolic="YES" id="Rx5-qy-Jvn"/>
+                <constraint firstAttribute="bottom" secondItem="75q-jk-cr0" secondAttribute="bottom" id="h24-0F-Zf7"/>
+                <constraint firstItem="75q-jk-cr0" firstAttribute="top" secondItem="uoR-NK-vPo" secondAttribute="top" id="xcX-pi-mzD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="qdT-yF-ugV"/>
+        </view>
+    </objects>
+</document>

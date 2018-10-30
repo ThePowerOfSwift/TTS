@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BonusViewController" customModule="tts" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="9hC-7C-RGh" id="MNg-ki-zoD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9hC-7C-RGh">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что за бонусы?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Puo-4g-8TM">
+                    <rect key="frame" x="12" y="79" width="126.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mk-SI-e8M">
+                    <rect key="frame" x="12" y="108" width="345.5" height="81.5"/>
+                    <string key="text">Бонусы – это баллы, которые начисляются за каждую покупку или услугу, их можно использовать в виде скидки на ваши будущие приобретения</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.49803921568627452" green="0.50588235294117645" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Где их взять?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUK-n4-r77">
+                    <rect key="frame" x="12" y="205.5" width="108.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eer-6E-OHx">
+                    <rect key="frame" x="12" y="235" width="351" height="81.5"/>
+                    <string key="text">Бонусы автоматически зачисляются на ваш бонусный счет, достаточно купить автомобиль в одном из дилерских центров "ТТС" или обратиться в сервисный центр</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.49803921569999998" green="0.50588235290000005" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="На что можно потратить?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7T-zI-aWA">
+                    <rect key="frame" x="12" y="332.5" width="211" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы можете использовать бонусы при покупке автомобиля или запасных частей, а также при оплате услуг сервиса." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWI-2L-HfR">
+                    <rect key="frame" x="12" y="362" width="346.5" height="61"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.49803921569999998" green="0.50588235290000005" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 балл = 1 рубль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAV-8j-AcX">
+                    <rect key="frame" x="12" y="439" width="131" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.1450980392" green="0.1647058824" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7jz-1Z-TIT" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8mk-SI-e8M" secondAttribute="trailing" constant="12" id="5fs-Zk-5f6"/>
+                <constraint firstItem="Puo-4g-8TM" firstAttribute="leading" secondItem="7jz-1Z-TIT" secondAttribute="leading" constant="12" id="6Q9-Jv-BgX"/>
+                <constraint firstItem="ZAV-8j-AcX" firstAttribute="leading" secondItem="7jz-1Z-TIT" secondAttribute="leading" constant="12" id="DKb-rD-GPq"/>
+                <constraint firstItem="FWI-2L-HfR" firstAttribute="top" secondItem="C7T-zI-aWA" secondAttribute="bottom" constant="8" symbolic="YES" id="HXb-XL-TNk"/>
+                <constraint firstItem="7jz-1Z-TIT" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZAV-8j-AcX" secondAttribute="bottom" id="J8V-Cm-dCS"/>
+                <constraint firstItem="FWI-2L-HfR" firstAttribute="leading" secondItem="7jz-1Z-TIT" secondAttribute="leading" constant="12" id="Rmo-gT-weH"/>
+                <constraint firstItem="Puo-4g-8TM" firstAttribute="top" secondItem="7jz-1Z-TIT" secondAttribute="top" constant="15" id="TQz-7j-8Wh"/>
+                <constraint firstItem="ZAV-8j-AcX" firstAttribute="top" secondItem="FWI-2L-HfR" secondAttribute="bottom" constant="16" id="Vax-6h-Hgh"/>
+                <constraint firstItem="eer-6E-OHx" firstAttribute="leading" secondItem="7jz-1Z-TIT" secondAttribute="leading" constant="12" id="Yme-Hi-NLO"/>
+                <constraint firstItem="7jz-1Z-TIT" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FWI-2L-HfR" secondAttribute="trailing" constant="12" id="bOU-VG-3iQ"/>
+                <constraint firstItem="eer-6E-OHx" firstAttribute="top" secondItem="aUK-n4-r77" secondAttribute="bottom" constant="8" symbolic="YES" id="ge9-mV-9Ur"/>
+                <constraint firstItem="C7T-zI-aWA" firstAttribute="leading" secondItem="7jz-1Z-TIT" secondAttribute="leading" constant="12" id="iuX-4j-Dfy"/>
+                <constraint firstItem="8mk-SI-e8M" firstAttribute="top" secondItem="Puo-4g-8TM" secondAttribute="bottom" constant="8" symbolic="YES" id="j3q-T8-HKT"/>
+                <constraint firstItem="aUK-n4-r77" firstAttribute="top" secondItem="8mk-SI-e8M" secondAttribute="bottom" constant="16" id="mJv-zq-0IM"/>
+                <constraint firstItem="7jz-1Z-TIT" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eer-6E-OHx" secondAttribute="trailing" constant="12" id="pVf-hq-Gbv"/>
+                <constraint firstItem="aUK-n4-r77" firstAttribute="leading" secondItem="7jz-1Z-TIT" secondAttribute="leading" constant="12" id="pjx-oD-b8E"/>
+                <constraint firstItem="C7T-zI-aWA" firstAttribute="top" secondItem="eer-6E-OHx" secondAttribute="bottom" constant="16" id="uSn-gM-Y2b"/>
+                <constraint firstItem="8mk-SI-e8M" firstAttribute="leading" secondItem="7jz-1Z-TIT" secondAttribute="leading" constant="12" id="ypd-Ul-ece"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="7jz-1Z-TIT"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AboutHeaderCell" customModule="tts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glow" translatesAutoresizingMaskIntoConstraints="NO" id="Ghf-BY-wzn">
+                        <rect key="frame" x="2.5" y="0.0" width="315" height="168"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_logo" translatesAutoresizingMaskIntoConstraints="NO" id="J8O-5h-P9Y">
+                        <rect key="frame" x="96.5" y="56" width="127" height="56"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Версия 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skx-cL-4cQ">
+                        <rect key="frame" x="127" y="127" width="66" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                        <color key="textColor" red="0.4392156862745098" green="0.48627450980392156" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Ghf-BY-wzn" firstAttribute="centerY" secondItem="cX5-gB-PQn" secondAttribute="centerY" id="DZd-tk-K6k"/>
+                <constraint firstItem="Skx-cL-4cQ" firstAttribute="top" secondItem="J8O-5h-P9Y" secondAttribute="bottom" constant="15" id="YXM-xk-UZM"/>
+                <constraint firstItem="Ghf-BY-wzn" firstAttribute="centerX" secondItem="cX5-gB-PQn" secondAttribute="centerX" id="alQ-tw-l0z"/>
+                <constraint firstItem="J8O-5h-P9Y" firstAttribute="centerX" secondItem="Ghf-BY-wzn" secondAttribute="centerX" id="jrd-im-Obt"/>
+                <constraint firstItem="Skx-cL-4cQ" firstAttribute="centerX" secondItem="J8O-5h-P9Y" secondAttribute="centerX" id="zCc-S8-TTu"/>
+                <constraint firstItem="J8O-5h-P9Y" firstAttribute="centerY" secondItem="Ghf-BY-wzn" secondAttribute="centerY" id="zLw-Ns-xt7"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="cX5-gB-PQn"/>
+            <size key="customSize" width="320" height="168"/>
+            <connections>
+                <outlet property="bundleVersionLabel" destination="Skx-cL-4cQ" id="3JN-U3-DO6"/>
+            </connections>
+            <point key="canvasLocation" x="-101" y="-5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="about_logo" width="127" height="56"/>
+        <image name="glow" width="315" height="168"/>
+    </resources>
+</document>

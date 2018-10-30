@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>tts.SubmitButton</key>
+	<array>
+		<array>
+			<string>setBackgroundColor:forState:</string>
+			<array>
+				<string>THMStringToColorTransformer</string>
+				<string>f13434ff</string>
+			</array>
+			<integer>0</integer>
+		</array>
+		<array>
+			<string>setBackgroundColor:forState:</string>
+			<array>
+				<string>THMStringToColorTransformer</string>
+				<string>384158ff</string>
+			</array>
+			<integer>2</integer>
+		</array>
+	</array>
+	<key>tts.OrderTechServiceVariantNextButton</key>
+	<array>
+		<array>
+			<string>setBackgroundColor:forState:</string>
+			<array>
+				<string>THMStringToColorTransformer</string>
+				<string>2A3244ff</string>
+			</array>
+			<integer>0</integer>
+		</array>
+	</array>
+	<key>tts.GarageAutoArchiveButton</key>
+	<array>
+		<array>
+			<string>setBackgroundColor:forState:</string>
+			<array>
+				<string>THMStringToColorTransformer</string>
+				<string>ffffff00</string>
+			</array>
+			<integer>0</integer>
+		</array>
+	</array>
+</dict>
+</plist>

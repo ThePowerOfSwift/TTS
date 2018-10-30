@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>598596553811-2e5i4ejlm2tdkb2p145ffkn9ivq4m7s1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.598596553811-2e5i4ejlm2tdkb2p145ffkn9ivq4m7s1</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCymTDkHVW1nV1c1TNcSsOHiAA8Uoqhjxw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>598596553811</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ru.tts.garage</string>
+	<key>PROJECT_ID</key>
+	<string>ttsmobile-97740</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ttsmobile-97740.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:598596553811:ios:2fe13ae8442450ab</string>
+	<key>DATABASE_URL</key>
+	<string>https://ttsmobile-97740.firebaseio.com</string>
+</dict>
+</plist>

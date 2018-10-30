@@ -1,0 +1,5 @@
+github "Flipboard/FLAnimatedImage" "1.0.14"
+github "Instagram/IGListKit" "3.4.0"
+github "NYTimes/NYTPhotoViewer" "v2.0.0"
+github "SwiftKickMobile/SwiftMessages" "4.1.4"
+github "xmartlabs/XLPagerTabStrip" "8.0.1"

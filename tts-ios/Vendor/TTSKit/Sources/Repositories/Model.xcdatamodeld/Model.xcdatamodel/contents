@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ArchivedAuto" representedClassName="ArchivedAutoEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="json" attributeType="Binary" syncable="YES"/>
+        <attribute name="order" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="RepairPoint" representedClassName="RepairPointEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="city" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cityName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ServiceCenter" representedClassName="ServiceCenterEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="json" attributeType="Binary" syncable="YES"/>
+        <relationship name="group" maxCount="1" deletionRule="Nullify" destinationEntity="ServiceCenterGroup" inverseName="services" inverseEntity="ServiceCenterGroup" syncable="YES"/>
+    </entity>
+    <entity name="ServiceCenterGroup" representedClassName="ServiceCenterGroupEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="address" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" attributeType="String" syncable="YES"/>
+        <attribute name="order" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="services" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ServiceCenter" inverseName="group" inverseEntity="ServiceCenter" syncable="YES"/>
+    </entity>
+    <entity name="Treatment" representedClassName="TreatmentEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="auto_id" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="json" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
+    <entity name="TreatmentDetail" representedClassName="TreatmentDetailEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="json" attributeType="Binary" syncable="YES"/>
+        <attribute name="treatment_id" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserAuto" representedClassName="UserAutoEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="brandId" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="json" attributeType="Binary" syncable="YES"/>
+        <attribute name="order" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="serviceId" optional="YES" attributeType="Integer 64" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="UserInfo" representedClassName="UserInfoEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="json" attributeType="Binary" syncable="YES"/>
+        <attribute name="phone" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ArchivedAuto" positionX="-54" positionY="18" width="128" height="90"/>
+        <element name="ServiceCenter" positionX="-45" positionY="36" width="128" height="90"/>
+        <element name="ServiceCenterGroup" positionX="-45" positionY="36" width="128" height="120"/>
+        <element name="Treatment" positionX="-54" positionY="27" width="128" height="105"/>
+        <element name="TreatmentDetail" positionX="-27" positionY="63" width="128" height="75"/>
+        <element name="UserAuto" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="UserInfo" positionX="-63" positionY="9" width="128" height="75"/>
+        <element name="RepairPoint" positionX="-45" positionY="54" width="128" height="135"/>
+    </elements>
+</model>

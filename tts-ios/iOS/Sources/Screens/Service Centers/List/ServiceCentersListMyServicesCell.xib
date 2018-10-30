@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ServiceCentersListMyServicesCell" customModule="tts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ge5-9C-5Fe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5P9-dj-sZW">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="gTV-IL-0wX" id="PeO-N9-ebB"/>
+                            <outlet property="delegate" destination="gTV-IL-0wX" id="59I-yD-o2K"/>
+                        </connections>
+                    </collectionView>
+                    <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="p0G-3c-ggb">
+                        <rect key="frame" x="0.0" y="128" width="320" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="nOg-Fx-teH"/>
+                        </constraints>
+                        <color key="pageIndicatorTintColor" red="0.36470588235294116" green="0.41176470588235292" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="currentPageIndicatorTintColor" red="0.91764705882352937" green="0.10196078431372549" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                    </pageControl>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ge5-9C-5Fe" secondAttribute="trailing" id="5gU-Mm-Csa"/>
+                <constraint firstAttribute="trailing" secondItem="p0G-3c-ggb" secondAttribute="trailing" id="62m-Vg-P20"/>
+                <constraint firstItem="p0G-3c-ggb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="NHF-n8-ckj"/>
+                <constraint firstAttribute="bottom" secondItem="ge5-9C-5Fe" secondAttribute="bottom" id="gqq-bW-amr"/>
+                <constraint firstAttribute="bottom" secondItem="p0G-3c-ggb" secondAttribute="bottom" constant="-12" id="jR9-Fv-T7H"/>
+                <constraint firstItem="ge5-9C-5Fe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="juQ-dg-qDw"/>
+                <constraint firstItem="ge5-9C-5Fe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zxc-EE-yXD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="2nz-eR-T1c"/>
+            <connections>
+                <outlet property="collectionView" destination="ge5-9C-5Fe" id="yhV-7a-ep1"/>
+                <outlet property="pageControl" destination="p0G-3c-ggb" id="hM0-O4-GKZ"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
